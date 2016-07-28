@@ -1,0 +1,18 @@
+<section class="container">
+  <h2 class="text-center text-uppercase"> notes</h2>
+  <a href="#/notes/new" class="btn btn-success">New Note</a>
+  <p class="categories-filter-label">Categories</p>
+  <nw-category-filter></nw-category-filter>
+</section>
+<br>
+<section class="container-fluid">
+  <div class="row">
+      <ul class="notes-list">
+        <li class="note col-sm-6" ng-repeat="note in notes | categoryFilter:search | filter:searchInput">
+          <h3><a ng-href="#/notes/{{note._id}}" title="{{note.user.name}}">{{note.title}}</a></h3>
+          <p>Description: {{note.description}}</p>
+          <p><span class="label label-info">{{note.category}}</span></p>
+        </li>
+      </ul>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<div class="filter-container nw-category-filter">
+  <select class="form-control" name="category" ng-options="category.name as category.name for category in categories" ng-model="search">
+    <option value="">All</option>
+  </select>
+  <div class="form-group search-input-container">
+    <label for="" class="label-search-input">Search</label>
+    <input type="text" name="searchInput" class="form-control" value="" placeholder="Search note" ng-model="searchInput.$">
+  </div>
+</div>

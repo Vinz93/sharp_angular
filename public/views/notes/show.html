@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h2 class="text-center" >{{note.title}}</h2>
+    <p class="show-note-description">{{note.description}}</p>
+    <p class="author" ><strong>Author: </strong>{{note.user.name}}</p >
+    <p><strong>Category: </strong><span class="label label-info">{{note.category}}</span></p>
+    <span class="btn-show">
+      <a ng-href="#/notes/{{note._id}}/edit" class="btn btn-default">Edit</a>
+      <a ng-href="#/" class="btn btn-danger" ng-click="delteNote(note)">Delete</a>
+    </span>
+  </div>
+
+</div>
