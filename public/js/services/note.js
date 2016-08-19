@@ -1,6 +1,6 @@
 'use strict';
 app.factory('Note', function ($resource) {
-  return $resource('/notes/:id', {id: "@id"}, {
+  return $resource('/notes/:id', {id: "@_id"}, {
       'update': {
         method: "PUT"
       }

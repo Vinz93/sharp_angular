@@ -43,6 +43,7 @@ app.put('/notes/:id', function (req, res) {
     category : req.body.category,
     user: { name: req.body.user.name}
   };
+  console.log("id note:",req.params.id);
   notes.update({"_id": new ObjectId(req.params.id)}, {$set: updateNote}, { upsert: true}, function (err, doc) {
     if(err) throw err;
     res.json(req.body);
